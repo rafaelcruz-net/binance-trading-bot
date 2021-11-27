@@ -36,20 +36,6 @@ class Footer extends React.Component {
     return (
       <div className='app-footer'>
         <div className='footer-wrapper'>
-          <div className='footer-column mr-1'>
-            Running Version: <span className='ml-1'>v{packageVersion}</span> (
-            {gitHash})
-          </div>
-          <div className='footer-column'>
-            Latest Version:
-            <a
-              href='https://github.com/chrisleekr/binance-trading-bot/releases'
-              target='_blank'
-              className='ml-1'
-              rel='noreferrer'>
-              v{currentVersion}
-            </a>
-          </div>
         </div>
       </div>
     );

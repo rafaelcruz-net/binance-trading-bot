@@ -8,14 +8,14 @@ const mongo = require('./mongo');
 /* istanbul ignore next */
 const fakeLogger = {
   child: _childData => ({
-    info: (..._infoData) => {}
+    info: (..._infoData) => { }
   })
 };
 
 // This variable will store last log per symbol to avoid saving the duplicated log.
 const lastLogs = {};
 
-function InfoStream() {}
+function InfoStream() { }
 InfoStream.prototype.write = rawLog => {
   const log = JSON.parse(rawLog);
 
@@ -57,7 +57,7 @@ const logger = bunyan.createLogger({
     },
     {
       stream: new InfoStream(),
-      level: 'INFO'
+      level: 'DEBUG'
     }
   ]
 });

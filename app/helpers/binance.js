@@ -4,6 +4,7 @@ const Binance = require('binance-api-node').default;
 
 const binanceOptions = {};
 
+
 if (config.get('mode') === 'live') {
   binanceOptions.apiKey = config.get('binance.live.apiKey');
   binanceOptions.apiSecret = config.get('binance.live.secretKey');

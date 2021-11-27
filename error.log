@@ -1,0 +1,29 @@
+__________.__                                    __________        __
+\______   \__| ____ _____    ____   ____  ____   \______   \ _____/  |_
+ |    |  _/  |/    \__  \  /    \_/ ___\/ __ \   |    |  _//  _ \   __
+ |    |   \  |   |  \/ __ \|   |  \  \__\  ___/   |    |   (  <_> )  |
+ |______  /__|___|  (____  /___|  /\___  >___  >  |______  /\____/|__|
+        \/        \/     \/     \/     \/    \/          \/
+
+> binance-trading-bot@0.0.85 migrate:up /srv
+> migrate up --store=/srv/mongo-state-storage.js
+
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":26,"level":30,"NODE_ENV":"development","msg":"API logger loaded","time":"2021-11-23T23:29:01.210Z","v":0}
+  migration : complete
+
+> binance-trading-bot@0.0.85 dev /srv
+> cross-env NODE_ENV=development nodemon app/server.js
+
+[33m[nodemon] 2.0.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node app/server.js`[39m
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"level":30,"NODE_ENV":"development","msg":"API logger loaded","time":"2021-11-23T23:29:02.527Z","v":0}
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"gitHash":"unspecified","helper":"mongo","level":30,"uri":"mongodb://binance-mongo:27017/?retryWrites=true&writeConcern=majority","msg":"Connecting mongodb","time":"2021-11-23T23:29:03.576Z","v":0}
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"gitHash":"unspecified","helper":"mongo","level":30,"msg":"Connected successfully to mongodb","time":"2021-11-23T23:29:03.609Z","v":0}
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"gitHash":"unspecified","server":"binance","level":30,"config":{"mode":"test","tz":"Australia/Melbourne","appName":"Binance Trading Bot","binance":{"live":{"apiKey":"<masked>","secretKey":"<masked>"},"test":{"apiKey":"<masked>","secretKey":"<masked>"}},"redis":{"host":"binance-redis","port":6379,"password":"secretp422","db":0},"mongo":{"host":"binance-mongo","port":27017,"database":"binance-bot"},"slack":{"enabled":false,"webhookUrl":"","channel":"","username":""},"localTunnel":{"enabled":false,"subdomain":"default"},"featureToggle":{"notifyOrderConfirm":true,"notifyDebug":false,"notifyOrderExecute":true},"authentication":{"enabled":true,"password":"Rafa13031895!","loginLimiter":{"maxConsecutiveFails":5,"duration":10800,"blockDuration":900}},"jobs":{"alive":{"enabled":true,"cronTime":"0 0 9 * * *"},"trailingTrade":{"enabled":true,"cronTime":"* * * * * *","symbols":["BTCUSDT","ETHUSDT","ETHBTC","XRPBTC"],"botOptions":{"authentication":{"lockList":true,"lockAfter":120},"autoTriggerBuy":{"enabled":false,"triggerAfter":20,"conditions":{"whenLessThanATHRestriction":true,"afterDisabledPeriod":true,"tradingView":{"whenStrongBuy":true,"whenBuy":true}}},"orderLimit":{"enabled":true,"maxBuyOpenOrders":3,"maxOpenTrades":5},"tradingView":{"interval":"","useOnlyWithin":5,"ifExpires":"ignore"},"logs":{"deleteAfter":30}},"candles":{"interval":"1h","limit":100},"buy":{"enabled":true,"gridTrade":[{"triggerPercentage":1,"stopPercentage":1.02,"limitPercentage":1.021,"minPurchaseAmount":-1,"minPurchaseAmounts":{},"maxPurchaseAmount":-1,"maxPurchaseAmounts":{}}],"lastBuyPriceRemoveThreshold":-1,"lastBuyPriceRemoveThresholds":{},"athRestriction":{"enabled":true,"candles":{"interval":"1d","limit":30},"restrictionPercentage":0.9},"tradingView":{"whenStrongBuy":true,"whenBuy":true}},"sell":{"enabled":true,"gridTrade":[{"triggerPercentage":1.06,"stopPercentage":0.98,"limitPercentage":0.979,"quantityPercentage":-1,"quantityPercentages":{}}],"stopLoss":{"enabled":false,"maxLossPercentage":0.8,"disableBuyMinutes":360,"orderType":"market"},"tradingView":{"forceSellOverZeroBelowTriggerPrice":{"whenNeutral":false,"whenSell":false,"whenStrongSell":false}}},"system":{"temporaryDisableActionAfterConfirmingOrder":20,"checkManualOrderPeriod":5,"placeManualOrderInterval":5,"refreshAccountInfoPeriod":1,"checkOrderExecutePeriod":10}},"trailingTradeIndicator":{"enabled":true,"cronTime":"* * * * * *"}}},"msg":"Binance test started on","time":"2021-11-23T23:29:03.613Z","v":0}
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"gitHash":"unspecified","server":"binance","helper":"mongo","funcName":"findOne","level":30,"collectionName":"trailing-trade-common","query":{"key":"configuration"},"msg":"Finding document from MongoDB","time":"2021-11-23T23:29:03.614Z","v":0}
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"gitHash":"unspecified","server":"binance","helper":"mongo","funcName":"findOne","level":30,"result":{"_id":"619d77decc3e2c05ae131a00","key":"configuration"},"msg":"Found document from MongoDB","time":"2021-11-23T23:29:03.618Z","v":0}
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"gitHash":"unspecified","server":"binance","level":30,"tag":"get-account-info","msg":"Could not parse account information from cache, get from api","time":"2021-11-23T23:29:03.621Z","v":0}
+{"name":"binance-api","version":"0.0.85","hostname":"26c2e0d34abf","pid":66,"gitHash":"unspecified","server":"binance","level":30,"tag":"get-account-info","msg":"Retrieving account info from API","time":"2021-11-23T23:29:03.621Z","v":0}

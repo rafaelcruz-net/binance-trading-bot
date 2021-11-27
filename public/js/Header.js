@@ -38,17 +38,6 @@ class Header extends React.Component {
               setSearchKeyword={setSearchKeyword}
               isAuthenticated={isAuthenticated}
             />
-
-            <div className='header-column-icon-wrapper github-wrapper'>
-              <a
-                href='https://github.com/chrisleekr/binance-trading-bot'
-                target='_blank'
-                className='btn btn-sm p-0 pl-1 pr-1'
-                rel='noreferrer'>
-                <i className='fab fa-github'></i>
-              </a>
-            </div>
-
             {_.isEmpty(publicURL) === false ? (
               <div className='header-column-icon-wrapper public-url-wrapper'>
                 <a
